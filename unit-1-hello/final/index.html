@@ -1,10 +1,130 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Hello</title>
-	<link rel="stylesheet" href="https://zachwhalen.github.io/cwd-hub/ring/onionring.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For Honor Fan Corner (2001)</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!--
+    Inspiration + motivation:
+    I wanted this to feel like an early-2000s fan page: a fixed-width centered layout, loud colors,
+    a sidebar menu, a marquee update bar, and a "best viewed in 800x600" type vibe.
+    Creative choices:
+    - Dark navy background with a star pattern look
+    - Table-based layout
+    - Small Verdana text, bright links, and badge-style images
+    - Simple navigation to multiple pages so everything is reachable from this URL
+  -->
+
+  <!-- Tutorials/examples used:
+       - MDN HTML basics: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics
+       - MDN CSS basics:  https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics
+       (Code here is original but follows common patterns shown in those references.)
+  -->
 </head>
+
 <body>
-	<h1>Hello, world!</h1>
+  <table class="frame" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="header" colspan="2">
+        <h1>⚔ For Honor Fan Corner ⚔</h1>
+        <p class="sub">best viewed in 800x600 • headphones recommended • updated: 01/26/2002</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="marquee" colspan="2">
+        <!-- Period-accurate classic (not great for accessibility, but included for the assignment vibe) -->
+        <marquee behavior="scroll" direction="left" scrollamount="3">
+          Welcome, warrior! • New: Heroes page • Sign the guestbook (not real yet) • Respect the 1v1
+        </marquee>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="nav" valign="top">
+        <div class="box">
+          <h2>Navigation</h2>
+          <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About For Honor</a></li>
+            <li><a href="heroes.html">Heroes</a></li>
+            <li><a href="links.html">Cool Links</a></li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h2>Site Badge</h2>
+          <!-- Image #1 using <img> tag (local file) -->
+          <img
+            src="assets/emblem.png"
+            class="badge"
+            alt="Small custom emblem image used as the site badge for this For Honor fan page">
+          <p class="tiny">steal this badge (jk)</p>
+        </div>
+
+        <div class="box">
+          <h2>Webring</h2>
+
+          <!-- Replace THIS embed with the webring code your instructor/site provides -->
+          <!-- Webring embed placeholder (example structure) -->
+          <div class="webring">
+            <p class="tiny"><b>Fan Webring</b></p>
+            <p class="tiny">
+              <a href="#" title="Previous site in the webring">⟵ Prev</a> |
+              <a href="#" title="Random site in the webring">Random</a> |
+              <a href="#" title="Next site in the webring">Next ⟶</a>
+            </p>
+          </div>
+        </div>
+      </td>
+
+      <td class="main" valign="top">
+        <div class="box">
+          <h2>Welcome</h2>
+          <!-- Image #2 using <img> tag (local file) -->
+          <img
+            src="assets/banner.png"
+            class="banner"
+            alt="Wide banner image related to For Honor, showing a dramatic medieval battle vibe">
+
+          <p>
+            This is my tiny corner of the internet for <b>For Honor</b>. It’s a sword-fighting game where
+            you pick a hero, learn a moveset, and try not to get folded in the first 20 seconds.
+          </p>
+        </div>
+
+        <div class="box">
+          <h2>Updates</h2>
+          <ul class="updates">
+            <li><b>01/26/2002:</b> Added the Heroes page and made the sidebar cleaner.</li>
+            <li><b>01/20/2002:</b> Put in local images so GitHub Pages actually hosts them.</li>
+            <li><b>01/10/2002:</b> Started the site. Under construction forever.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h2>External Link</h2>
+          <p>
+            Official For Honor site:
+            <a href="https://www.ubisoft.com/en-us/game/for-honor" target="_blank" rel="noopener">
+              Ubisoft - For Honor
+            </a>
+          </p>
+
+          <p class="tiny">
+            <!-- Process/tutorial credit -->
+            The external link uses target="_blank" and rel="noopener" based on common web safety guidance.
+          </p>
+        </div>
+
+        <div class="footer">
+          <p class="tiny">© 2002 For Honor Fan Corner • made with questionable taste</p>
+        </div>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>

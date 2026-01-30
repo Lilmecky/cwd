@@ -1,0 +1,120 @@
+/* Tutorial/reference credit (not copied, but informed by):
+   - MDN CSS basics: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000033;
+  color: #ffffff;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+}
+
+a:link { color: #66ccff; }
+a:visited { color: #cc99ff; }
+a:hover { color: #ffff66; }
+
+.frame {
+  width: 760px;
+  margin: 18px auto;
+  border: 3px ridge #9999ff;
+  background: #000066;
+}
+
+.header {
+  text-align: center;
+  padding: 14px 10px;
+  background: #0000aa;
+  border-bottom: 2px solid #9999ff;
+}
+
+.header h1 {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 34px;
+  letter-spacing: 2px;
+}
+
+.sub {
+  margin: 6px 0 0 0;
+  color: #ccffff;
+  font-size: 11px;
+}
+
+.marquee {
+  background: #000044;
+  border-top: 1px solid #6666ff;
+  border-bottom: 1px solid #6666ff;
+  padding: 4px 8px;
+  font-size: 11px;
+}
+
+.nav {
+  width: 200px;
+  padding: 10px;
+  background: #000055;
+  border-right: 2px solid #6666ff;
+}
+
+.main {
+  padding: 10px;
+}
+
+.box {
+  background: #000055;
+  border: 2px outset #9999ff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.box h2 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #ccffff;
+}
+
+.navlist {
+  list-style: square;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.badge {
+  display: block;
+  width: 160px;
+  height: auto;
+  border: 2px solid #6666ff;
+  margin: 6px auto 0 auto;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid #6666ff;
+  margin: 6px 0 10px 0;
+}
+
+.updates {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.tiny {
+  font-size: 10px;
+  color: #ccccff;
+}
+
+.webring {
+  border: 1px dashed #9999ff;
+  padding: 8px;
+  background: #000033;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 6px;
+  border-top: 1px solid #6666ff;
+}
