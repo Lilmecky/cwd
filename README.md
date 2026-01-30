@@ -1,2 +1,2 @@
 # CWD
-A repository for my Critical Web Design class.
+This is a place where my websites for DIST 301: Web Design will be held.
