@@ -1,71 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!--There are better ways of making this without the use of so many divs, I just wanted to practice using more divs and classes-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <title>Talk</title>
+    <title>Talk</title>
 
     <style>
-        
         body {
             font-family: Arial, sans-serif;
-            margin: 25px;
-            margin-left: 150px;
-            margin-right: 150px;
             line-height: 1.6;
             font-size: 25px;
             background-color: #edeeef;
+            margin-left: 200px;
+            margin-right: 200px;
         }
+
         h1 {
             color: #1aff00;
-        }
-        p {
-            font-family: 'Times New Roman', Times, serif;
-            margin-bottom: 15px;
-            font-size: 20px;
-            border-radius: 10px;
-            padding: 15px;
-            width: 300px;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-        }
-        .S1 {
-            color: #ff0044;
-            text-align: left;
-            border: 1px solid #ff0044;
-        }
-        .S2 {
-            color: #008cff;
-            text-align: right;
-            border: 1px solid #008cff;
-        }
-        .headerC {
             text-align: center;
         }
 
+        p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        .row {
+            display: flex;
+            margin: 0px 0;
+        }
+
+        .row.left {
+            justify-content: flex-start;
+        }
+
+        .row.right {
+            justify-content: flex-end;
+        }
+
+        .bubble {
+            display: inline-block;
+            width: fit-content;
+            max-width: 70%;
+            padding: 18px 24px;
+            border-radius: 16px;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+            white-space: normal;
+            word-wrap: break-word;
+        }
+
+        .S1 {
+            color: #ff0044;
+            text-align: left;
+            box-shadow: 3px 3px 10px rgba(239, 11, 11, 0.2);
+        }
+
+        .S2 {
+            color: #008cff;
+            text-align: right;
+            box-shadow: 3px 3px 10px rgba(27, 13, 222, 0.2);
+        }
+
+        .bubble.S1 { 
+            text-align: left;  color: #c00; 
+        }
+
+        .bubble.S2 { 
+            text-align: right; color: #06c; 
+        }
+
     </style>
-    
+
 </head>
+
 <body>
 
-    <h1 class="headerC">A Conversation</h1>
+    <h1>A Conversation</h1>
 
-    <p class="S1">S1: We need to talk</p>
+    <div class="row left">
+        <p class="bubble S1">S1: We need to talk</p>
+    </div>
 
-    <p class="S2">What do you want to talk about :S2</p>
-    
-    <p class="S1">Where do you want to go and eat?</p>
-    
-    <p class="S2">I was thinking burgers, like firebirds</p>
-    
-    <p class="S1">That’s a little to expensive, how about some place cheaper like five guys or something</p>
-    
-    <p class="S2">That’s a little too greasy, maybe mcdonald’s?</p>
-    
-    <p class="S1">Mcdonald’s just as greasy, maybe burgers isn’t the best option. How about going for kbbq?</p>
-    
-    <p class="S2">Yeah that sounds great, let’s head out</p>
+    <div class="row right">
+        <p class="bubble S2">What do you want to talk about :S2</p>
+    </div>
+
+    <div class="row left">
+        <p class="bubble S1">S1: Where do you want to go and eat?</p>
+    </div>
+
+    <div class="row right">
+        <p class="bubble S2">I was thinking burgers, like firebirds :S2</p>
+    </div>
+
+    <div class="row left">
+        <p class="bubble S1">S1: That’s a little to expensive, how about some place cheaper like five guys or something</p>
+    </div>
+
+    <div class="row right">
+        <p class="bubble S2">That’s a little too greasy, maybe mcdonald’s? :S2</p>
+    </div>
+
+    <div class="row left">
+        <p class="bubble S1">S1: Mcdonald’s just as greasy, maybe burgers isn’t the best option. How about going for kbbq?</p>
+    </div>
+
+    <div class="row right">
+        <p class="bubble S2">Yeah that sounds great, let’s head out :S2</p>
+    </div>
 
 </body>
+
 </html>
