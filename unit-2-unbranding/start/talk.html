@@ -9,6 +9,21 @@
     <title>Talk</title>
 
     <style>
+        
+        .container-convo {
+            width: 70%;
+            margin: 40px auto;
+            padding: 20px;
+
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -66,12 +81,14 @@
             box-shadow: 3px 3px 10px rgba(27, 13, 222, 0.2);
         }
 
-        .bubble.S1 { 
-            text-align: left;  color: #c00; 
+        .bubble.S1 {
+            text-align: left;
+            color: #c00;
         }
 
-        .bubble.S2 { 
-            text-align: right; color: #06c; 
+        .bubble.S2 {
+            text-align: right;
+            color: #06c;
         }
 
     </style>
@@ -82,36 +99,42 @@
 
     <h1>A Conversation</h1>
 
-    <div class="row left">
-        <p class="bubble S1">S1: We need to talk</p>
-    </div>
+    <div class="container-convo">
 
-    <div class="row right">
-        <p class="bubble S2">What do you want to talk about :S2</p>
-    </div>
+        <div class="row left">
+            <p class="bubble S1">S1: We need to talk</p>
+        </div>
 
-    <div class="row left">
-        <p class="bubble S1">S1: Where do you want to go and eat?</p>
-    </div>
+        <div class="row right">
+            <p class="bubble S2">What do you want to talk about :S2</p>
+        </div>
 
-    <div class="row right">
-        <p class="bubble S2">I was thinking burgers, like firebirds :S2</p>
-    </div>
+        <div class="row left">
+            <p class="bubble S1">S1: Where do you want to go and eat?</p>
+        </div>
 
-    <div class="row left">
-        <p class="bubble S1">S1: That’s a little to expensive, how about some place cheaper like five guys or something</p>
-    </div>
+        <div class="row right">
+            <p class="bubble S2">I was thinking burgers, like firebirds :S2</p>
+        </div>
 
-    <div class="row right">
-        <p class="bubble S2">That’s a little too greasy, maybe mcdonald’s? :S2</p>
-    </div>
+        <div class="row left">
+            <p class="bubble S1">S1: That’s a little to expensive, how about some place cheaper like five guys or
+                something</p>
+        </div>
 
-    <div class="row left">
-        <p class="bubble S1">S1: Mcdonald’s just as greasy, maybe burgers isn’t the best option. How about going for kbbq?</p>
-    </div>
+        <div class="row right">
+            <p class="bubble S2">That’s a little too greasy, maybe mcdonald’s? :S2</p>
+        </div>
 
-    <div class="row right">
-        <p class="bubble S2">Yeah that sounds great, let’s head out :S2</p>
+        <div class="row left">
+            <p class="bubble S1">S1: Mcdonald’s just as greasy, maybe burgers isn’t the best option. How about going for
+                kbbq?</p>
+        </div>
+
+        <div class="row right">
+            <p class="bubble S2">Yeah that sounds great, let’s head out :S2</p>
+        </div>
+
     </div>
 
 </body>
