@@ -1,15 +1,196 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Unbranding</title>
 
-	<!--
-	About this page:
+  <!--
+    Inspiration + motivation:
+    This design intentionally mimics TikTok’s clean, high-contrast promotional aesthetic
+    while revealing a critical message about how attention is converted into profit.
+    The layout is extremely minimal — only a centered image and slogan —
+    because TikTok’s branding often relies on bold simplicity and emotional tone.
 
-	-->
-	<title>Unbranding</title>
-	
+    Creative choices:
+    - Pure black background to match TikTok’s dark interface
+    - Large centered logo-style graphic
+    - Bold white slogan text with tight spacing
+    - Hover interaction that exposes the critique
+  -->
+
+  <!--
+    Tutorials / references used:
+    - MDN HTML basics:
+      https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics
+    - MDN CSS basics:
+      https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics
+    - MDN addEventListener (JS events):
+      https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+
+    Code is original but follows common patterns from these references.
+  -->
+
+  <!--
+    Originally the text was inside of the image, but I moved it outside Since I did not like how it looked when the image changed.
+  -->
+
+  <style>
+    /* ---------------------------------------------------------
+      PAGE LAYOUT
+      Black background + white text, centered content.
+      Flexbox is used for vertical and horizontal centering.
+    ---------------------------------------------------------- */
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Container keeps content from stretching too wide */
+    #container {
+      width: min(900px, 92vw);
+    }
+
+    /* ---------------------------------------------------------
+      HOVER AREA
+      This wrapper fixes the interactive region so that swapping
+      images of different shapes/sizes does not cause flickering.
+    ---------------------------------------------------------- */
+
+    #hoverArea {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70vh;  /* Ensures image never forces scrolling */
+    }
+
+    /* ---------------------------------------------------------
+      IMAGE STYLING
+      Constrained by viewport height to prevent scroll issues.
+    ---------------------------------------------------------- */
+
+    #swapImage {
+      max-width: 100%;
+      max-height: 70vh;
+      width: auto;
+      height: auto;
+      display: block;
+      cursor: pointer;
+    }
+
+    /* ---------------------------------------------------------
+      CAPTION TEXT
+      Styled to resemble TikTok’s bold geometric slogan style.
+      Letter-spacing tightened for similar visual feel.
+    ---------------------------------------------------------- */
+
+    #caption {
+      margin-top: 8px;      /* Moved closer to image */
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+
+      letter-spacing: -0.02em;  /* Tight kerning */
+      line-height: 1.3;
+    }
+  </style>
 </head>
+
 <body>
-	<h1>Hello, world!</h1>
+
+  <!--
+    STATEMENT:
+
+    This project unbrands TikTok by contrasting its upbeat promotional identity
+    with a blunt critique of its underlying profit model. The default state shows
+    a familiar slogan emphasizing creativity and enjoyment. Hovering over the image
+    reveals a stark alternative symbol and message, suggesting that user engagement
+    is transformed into monetizable data. The interaction exposes how corporate
+    branding can obscure extractive systems behind entertainment-focused design.
+  -->
+
+  <div id="container">
+
+    <!--
+      IMAGE FILE LOCATION:
+
+      This HTML file should be at:
+      cwd/unit-2-unbranding/final/index.html
+
+      Images are stored at:
+      cwd/unit-2-unbranding/final/assets/images/
+
+      Therefore the correct relative paths are:
+      assets/images/TIKTOK_ORIGINAL.png
+      assets/images/TIKTOK_UNBRAND.png
+    -->
+
+    <div id="hoverArea">
+      <img
+        id="swapImage"
+        src="assets/images/TIKTOK_ORIGINAL.png"
+        alt="TikTok promotional logo. Hover to reveal critique."
+      />
+    </div>
+
+    <!-- Caption text that changes with the image -->
+    <p id="caption">Create. Discover. Enjoy.</p>
+
+  </div>
+
+  <script>
+    /*
+      INTERACTIVITY
+
+      This script swaps both the image and the text when the user
+      hovers over the image area, using mouseover and mouseout events.
+
+      Important implementation detail:
+      The event listeners are attached to the fixed-size wrapper
+      (#hoverArea), not the image itself. This prevents flickering when
+      switching between images of different dimensions.
+
+      Reference:
+      MDN EventTarget.addEventListener documentation.
+    */
+
+    const hoverArea = document.getElementById("hoverArea");
+    const img = document.getElementById("swapImage");
+    const caption = document.getElementById("caption");
+
+    // Relative paths to images inside the project folder
+    const ORIGINAL_IMG = "assets/images/TIKTOK_ORIGINAL.png";
+    const UNBRAND_IMG  = "assets/images/TIKTOK_UNBRAND.png";
+
+    // Text for each state
+    const ORIGINAL_TEXT = "Create. Discover. Enjoy.";
+    const UNBRAND_TEXT  = "Your attention is monetized.";
+
+    // Default state: original branding
+    img.src = ORIGINAL_IMG;
+    caption.textContent = ORIGINAL_TEXT;
+
+    // When mouse enters hover area → show critique
+    hoverArea.addEventListener("mouseover", () => {
+      img.src = UNBRAND_IMG;
+      caption.textContent = UNBRAND_TEXT;
+    });
+
+    // When mouse leaves hover area → return to original
+    hoverArea.addEventListener("mouseout", () => {
+      img.src = ORIGINAL_IMG;
+      caption.textContent = ORIGINAL_TEXT;
+    });
+  </script>
+
 </body>
 </html>
