@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f6f1e8;
+    color: #1f1f1f;
+}
+
+.site-header {
+    background-color: #d8ccc1;
+    padding: 2.5rem 0;
+    border-bottom: 3px solid #1f1f1f;
+}
+
+.paper-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.paper-tagline {
+    margin: 0;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.custom-nav {
+    background-color: #efe4da;
+    border-bottom: 2px solid #1f1f1f;
+}
+
+.custom-nav .nav-link {
+    color: #1f1f1f;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.custom-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+.news-card,
+.headline-block,
+.trending-box,
+.feature-section {
+    background-color: #ead8d2;
+    border: 2px solid #1f1f1f;
+    padding: 1rem;
+}
+
+.article-thumb {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid #1f1f1f;
+    margin-bottom: 0.9rem;
+}
+
+.article-title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.article-summary {
+    font-size: 0.97rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.section-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.main-headline {
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.main-summary {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.feature-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border: 2px solid #1f1f1f;
+}
+
+.trending-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.trending-list {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.trending-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.site-footer {
+    background-color: #d8ccc1;
+    border-top: 3px solid #1f1f1f;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+.footer-links {
+    font-size: 0.95rem;
+}
+
+@media (max-width: 991.98px) {
+    .paper-title {
+        font-size: 2.3rem;
+    }
+
+    .main-headline {
+        font-size: 1.7rem;
+    }
+
+    .feature-image {
+        height: 300px;
+    }
+}

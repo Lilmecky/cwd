@@ -1,20 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Press Daily</title>
 
-	<!-- 
-	About this page:
+    <!--
+    Creative choices:
+    I designed this project as a fake newspaper focused on positive and entertaining
+    video game news. I wanted the site to feel like a classic newspaper homepage while
+    still reflecting modern gaming culture. To do that, I used a Bootstrap 5 grid layout
+    with a large header, navigation bar, article column, feature story area, and a
+    trending section. The layout follows my Figma mockup closely by keeping a clear
+    hierarchy: top branding, left-side article previews, a central headline and summary,
+    and a larger right-side visual feature area. My goal was to make the site feel
+    familiar as a newspaper while replacing stressful real-world news with upbeat,
+    imaginary game-related stories.
 
+    Development process:
+    I began by creating a Figma mockup to plan the structure of the page before coding.
+    Then I translated that layout into Bootstrap rows and columns. I used custom CSS to
+    add spacing, borders, typography, and a newspaper-inspired visual style. I selected
+    a consistent voice for the writing so all of the headlines would feel like they came
+    from the same publication.
 
-	-->
-	<title>Fake News</title>
-	
-  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    Resources consulted:
+    https://getbootstrap.com/docs/5.3/layout/grid/
+    https://getbootstrap.com/docs/5.3/content/images/
+  -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	<h1>Hello, world!</h1>
+
+    <header class="site-header text-center">
+        <div class="container">
+            <h1 class="paper-title">Pixel Press Daily</h1>
+            <p class="paper-tagline">All the good news from the worlds you love</p>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg custom-nav">
+        <div class="container justify-content-center">
+            <ul class="navbar-nav flex-row flex-wrap gap-3">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Console</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">PC</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Indie</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Esports</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--
+    Images used in this project come from Pexels and Pixabay and are credited beneath
+    each image. They are used in a non-commercial educational assignment.
+-->
+
+    <main class="container my-4">
+        <div class="row g-4">
+
+            <!-- Left article column -->
+            <aside class="col-lg-3">
+                <section class="news-card mb-4">
+                    <img src="assets/images/Enjoying-Gaming.jpg"
+                        alt="Players celebrating during a cozy multiplayer game session"
+                        class="img-fluid article-thumb">
+                    <p class="article-source">Photo by <a
+                            href="https://www.pexels.com/photo/men-playing-computer-games-7915237/">RDNE Stock
+                            project</a></p>
+                    <h2 class="article-title">Multiplayer PC Game Sparks Intense Celebrations Among Players</h2>
+                    <p class="article-summary">
+                        Players are sharing clips of high-energy victories, with many describing the fast-paced co-op
+                        experience as "pure adrenaline" and as their go-to way to unwind after a long day of classes.
+                    </p>
+                </section>
+
+                <section class="news-card mb-4">
+                    <img src="assets/images/Minecraft-Village.jpg"
+                        alt="A cheerful fantasy village scene from a colorful role-playing game"
+                        class="img-fluid article-thumb">
+                    <p class="article-source">Image by <a
+                            href="https://pixabay.com/users/jovanmanic-4293292/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1988580">jovanmanic</a>
+                        from <a
+                            href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1988580">Pixabay</a>
+                    </p>
+                    <h2 class="article-title">Game Update Expands Coastal Builds with Ships, Villages, and New
+                        Structures</h2>
+                    <p class="article-summary">
+                        Players expected a minor patch, but instead received a large content update introducing detailed
+                        harbor builds, improved village designs, and expanded construction options.
+                    </p>
+                </section>
+
+                <section class="news-card">
+                    <img src="assets/images/Tourney-Gaming.jpg"
+                        alt="A pixel-art tournament screen with players competing in a friendly match"
+                        class="img-fluid article-thumb">
+                    <p class="article-source">Photo by <a
+                            href="https://www.pexels.com/photo/a-group-of-friends-playing-computer-games-in-a-tournament-9072268/">Yan
+                            Krukau</a></p>
+                    <h2 class="article-title">Local Gaming Event Brings Players Together for Competitive Team Matches
+                    </h2>
+                    <p class="article-summary">
+                        What began as a casual gathering quickly turned into a high-energy competition, with players
+                        teaming up, communicating through headsets, and celebrating coordinated victories.
+                    </p>
+                </section>
+            </aside>
+
+            <!-- Middle headline column -->
+            <section class="col-lg-3">
+                <div class="headline-block">
+                    <p class="section-label">Top Story</p>
+                    <h2 class="main-headline">Study Finds Gaming Setups Play Growing Role in Staying Connected</h2>
+                    <p class="main-summary">
+                        A fictional report from the Pixel Play Institute suggests that modern gaming spaces are playing
+                        a growing role in how people unwind, stay in touch, and share experiences online.
+                    </p>
+
+                    <p class="main-summary">
+                        Researchers found that while players may be physically alone at their desks, they are often
+                        deeply engaged with friends through voice chat, cooperative sessions, and shared online goals.
+                        Participants reported that well-designed setups encouraged longer play sessions, smoother
+                        communication, and a stronger sense of connection despite distance.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Right feature and trending column -->
+            <section class="col-lg-6">
+                <div class="feature-section mb-4">
+                    <img src="assets/images/Gaming-Setup.jpg"
+                        alt="A bright and exciting gaming setup displaying a colorful co-op adventure"
+                        class="img-fluid feature-image">
+                    <p class="article-source">Photo by <a
+                            href="https://www.pexels.com/photo/black-flat-screen-computer-monitor-on-white-wooden-desk-7238759/">Roberto
+                            Nickson</a></p>
+                </div>
+
+                <section class="trending-box">
+                    <h2 class="trending-title">Trending</h2>
+                    <ul class="trending-list">
+                        <li>Speedrunner Stops Mid-Run to Explain Trick to New Players</li>
+                        <li>Beloved Game Soundtrack Helps Students Focus During Finals Week</li>
+                        <li>Studio Announces Sequel and Says It Will Keep the Good Fishing Minigame</li>
+                        <li>Massive Minecraft Build Project Completed After Six Months of Teamwork</li>
+                        <li>Players Praise Update That Finally Lets Everyone Pet the Dog</li>
+                    </ul>
+                </section>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer text-center">
+        <div class="container">
+            <section class="my-4 image-credit-note">
+                <p>Image credits: This page uses images from Pexels and Pixabay for a non-commercial educational
+                    assignment. Photographer and source links are provided beneath each image.</p>
+            </section>
+            <p class="mb-1">© 2026 Pixel Press Daily</p>
+            <p class="footer-links mb-0">About | Contact | Archives | Subscribe</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>
