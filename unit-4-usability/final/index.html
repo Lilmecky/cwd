@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usability Testing Report: Amazon</title>
+
+    <!--
+    Creative choices:
+    I designed this report website to present usability findings in a way that is organized, readable, and easy to compare across tasks. Since this project is based on usability testing, I wanted the layout itself to reflect good usability principles by using clear headings, grouped content, consistent spacing, and a straightforward visual hierarchy. I used Bootstrap 5 to structure the page into sections for the overview, wireframes, task findings, summary metrics, and the interactive SUS calculator. I also included screenshots and descriptive analysis for each task so readers can quickly connect the visual evidence to the written findings. The overall design goal was to make the report feel professional and informative without becoming overly complicated. The final result supports that goal by emphasizing clarity, accessibility, and ease of navigation.
+  -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1f2937, #374151);
+            color: white;
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            border-left: 5px solid #0d6efd;
+            padding-left: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .task-img,
+        .wireframe-img {
+            width: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            border: 1px solid #dee2e6;
+        }
+
+        .metric-card h3 {
+            font-size: 2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .sus-score-box {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Usability Testing Report: Amazon</h1>
+            <p class="lead mb-2">Task-based evaluation of navigation, support, and account-related features</p>
+            <p class="mb-0">
+                This report presents findings from a usability test focused on how easily users could locate common
+                support, account, and policy information on Amazon.
+            </p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <section class="mb-5">
+            <h2 class="section-title">Project Overview</h2>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <p>
+                        For this project, I evaluated the usability of the Amazon website by focusing on tasks related
+                        to navigation, support, subscriptions, and account tools. Rather than testing core shopping
+                        actions, this report emphasizes tasks that require users to locate less visible information and
+                        make sense of menu labels and account pathways.
+                    </p>
+                    <p>
+                        The purpose of the usability test was to identify where users moved through the site
+                        successfully and where they experienced hesitation, misclicks, or uncertainty. The data below
+                        reflects three of my friends who each have different levels of familiarity with retail websites.
+                    </p>
+                    <p class="mb-0">
+                        This page also includes an interactive System Usability Scale calculator so readers can enter
+                        their own values and calculate a SUS score directly on the page.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="section-title">Wireframes</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <img src="../assets/images/wireframe-paper.jpg" class="wireframe-img"
+                            alt="Hand-drawn wireframe for the usability testing report website">
+                        <div class="card-body">
+                            <h3 class="h5">Analog Draft</h3>
+                            <p class="mb-0">
+                                The analog draft was used to sketch the overall page structure, including the header,
+                                findings sections, screenshots, metrics, and SUS calculator before moving into digital
+                                design.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <img src="../assets/images/wireframe-figma.png" class="wireframe-img"
+                            alt="Figma wireframe for the usability testing report website">
+                        <div class="card-body">
+                            <h3 class="h5">Figma Draft</h3>
+                            <p class="mb-0">
+                                The Figma draft refined the original idea by improving spacing, visual hierarchy, and
+                                the placement of content sections before the final site was built in Bootstrap 5.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="section-title">Summary Metrics</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm text-center metric-card h-100">
+                        <div class="card-body">
+                            <h3>5</h3>
+                            <p class="mb-0">Tasks Tested</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm text-center metric-card h-100">
+                        <div class="card-body">
+                            <h3>3</h3>
+                            <p class="mb-0">Participants</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm text-center metric-card h-100">
+                        <div class="card-body">
+                            <h3>60</h3>
+                            <p class="mb-0">Average SUS Score</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="section-title">Participants</h2>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <p>
+                        The tests below were conducted with three of my friends who volunteered to complete the tasks and provide feedback on their experience. Each user had a different level of familiarity with Amazon and e-commerce websites in general, which allowed me to observe a range of behaviors and challenges that different types of users might encounter when navigating the site.
+                    </p>
+                    <ul class="mb-0">
+                        <li><strong>User A:</strong> Average user who adapts fairly quickly</li>
+                        <li><strong>User B:</strong> User who is somewhat hesitant and depends on clearer labels</li>
+                        <li><strong>User C:</strong> More cautious user who relies on trial and error before finding the
+                            correct path</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="section-title">Task Findings</h2>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h4">Task 1: Find the return policy for electronics</h3>
+                    <div class="row g-4 align-items-center mt-1">
+                        <div class="col-lg-6">
+                            <img src="../assets/images/task1-electronics-return-policy.png" class="task-img"
+                                alt="Amazon help or returns page displaying return policy information for electronics">
+                        </div>
+                        <div class="col-lg-6">
+                            <h4 class="h6">Completion Times</h4>
+                            <ul>
+                                <li>User A: 39 seconds</li>
+                                <li>User B: 67 seconds</li>
+                                <li>User C: 91 seconds</li>
+                            </ul>
+                            <p>
+                                Users approached this task in different ways. Some looked in the site footer first,
+                                while others explored account menus or help links. Most users understood that the return
+                                policy existed somewhere on the site, but they were not immediately sure where policy
+                                information would be located.
+                            </p>
+                            <p class="mb-0">
+                                The main struggle was visibility. The information was present, but users had to guess
+                                which pathway would lead to it. This created hesitation and extra clicks, especially for
+                                users who were less confident navigating large retail websites.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h4">Task 2: Find how to contact customer service about a missing package</h3>
+                    <div class="row g-4 align-items-center mt-1">
+                        <div class="col-lg-6">
+                            <img src="../assets/images/task2-missing-package-support.png" class="task-img"
+                                alt="Amazon customer service or help page showing options for order issues and missing packages">
+                        </div>
+                        <div class="col-lg-6">
+                            <h4 class="h6">Completion Times</h4>
+                            <ul>
+                                <li>User A: 44 seconds</li>
+                                <li>User B: 78 seconds</li>
+                                <li>User C: 110 seconds</li>
+                            </ul>
+                            <p>
+                                This task produced some of the longest times in the test. Users explored several
+                                different labels, including Help, Customer Service, and Account, before identifying the
+                                most relevant route for a missing package issue.
+                            </p>
+                            <p class="mb-0">
+                                The largest problem was that support-related wording was not immediately specific. Users
+                                knew they needed assistance, but the site did not make the correct starting point feel
+                                obvious. As a result, they spent more time interpreting labels than actually moving
+                                toward the answer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h4">Task 3: Locate where to view or track past orders</h3>
+                    <div class="row g-4 align-items-center mt-1">
+                        <div class="col-lg-6">
+                            <img src="../assets/images/task3-track-orders.png" class="task-img"
+                                alt="Amazon orders page showing options to view past orders and track packages">
+                        </div>
+                        <div class="col-lg-6">
+                            <h4 class="h6">Completion Times</h4>
+                            <ul>
+                                <li>User A: 24 seconds</li>
+                                <li>User B: 49 seconds</li>
+                                <li>User C: 72 seconds</li>
+                            </ul>
+                            <p>
+                                This was one of the easier tasks overall. Most users correctly assumed that order
+                                history and tracking tools would be located within the account area, which allowed them
+                                to move through the site more efficiently than in the support-related tasks.
+                            </p>
+                            <p class="mb-0">
+                                Even so, less confident users still needed a few extra clicks before reaching the
+                                correct section. The task was manageable, but it still depended somewhat on familiarity
+                                with standard e-commerce account navigation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h4">Task 4: Find how to cancel or manage a subscription/service</h3>
+                    <div class="row g-4 align-items-center mt-1">
+                        <div class="col-lg-6">
+                            <img src="../assets/images/task4-manage-subscription.png" class="task-img"
+                                alt="Amazon account or subscription management page showing ways to manage or cancel a service">
+                        </div>
+                        <div class="col-lg-6">
+                            <h4 class="h6">Completion Times</h4>
+                            <ul>
+                                <li>User A: 50 seconds</li>
+                                <li>User B: 81 seconds</li>
+                                <li>User C: 112 seconds</li>
+                            </ul>
+                            <p>
+                                Users had difficulty with this task because subscriptions and services are not always
+                                grouped under the wording people expect. Several users searched through account settings
+                                first before realizing they needed a more specific service or membership management
+                                area.
+                            </p>
+                            <p class="mb-0">
+                                The struggle here came from category placement and labeling. Users often understood what
+                                they wanted to do, but not where the site expected them to go in order to do it. This
+                                made the task feel less intuitive than order tracking or general account access.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h4">Task 5: Find where gift card balance information is located</h3>
+                    <div class="row g-4 align-items-center mt-1">
+                        <div class="col-lg-6">
+                            <img src="../assets/images/task5-gift-card-balance.png" class="task-img"
+                                alt="Amazon gift card page showing balance lookup or gift card account information">
+                        </div>
+                        <div class="col-lg-6">
+                            <h4 class="h6">Completion Times</h4>
+                            <ul>
+                                <li>User A: 31 seconds</li>
+                                <li>User B: 56 seconds</li>
+                                <li>User C: 83 seconds</li>
+                            </ul>
+                            <p>
+                                Most users expected gift card tools to appear somewhere under account-related features,
+                                but they did not always know whether to look under payments, gift cards, or general
+                                account settings first.
+                            </p>
+                            <p class="mb-0">
+                                This task was easier than customer support and subscription management, but it still
+                                caused some uncertainty because the wording on the site requires users to predict how
+                                gift card information is categorized.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="section-title">Task Timing Table</h2>
+            <div class="card shadow-sm">
+                <div class="card-body table-responsive">
+                    <table class="table table-striped table-bordered align-middle mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Task</th>
+                                <th>User A</th>
+                                <th>User B</th>
+                                <th>User C</th>
+                                <th>Average Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Find the return policy for electronics</td>
+                                <td>39s</td>
+                                <td>67s</td>
+                                <td>91s</td>
+                                <td>65.7s</td>
+                            </tr>
+                            <tr>
+                                <td>Contact customer service about a missing package</td>
+                                <td>44s</td>
+                                <td>78s</td>
+                                <td>110s</td>
+                                <td>77.3s</td>
+                            </tr>
+                            <tr>
+                                <td>View or track past orders</td>
+                                <td>24s</td>
+                                <td>49s</td>
+                                <td>72s</td>
+                                <td>48.3s</td>
+                            </tr>
+                            <tr>
+                                <td>Cancel or manage a subscription/service</td>
+                                <td>50s</td>
+                                <td>81s</td>
+                                <td>112s</td>
+                                <td>81.0s</td>
+                            </tr>
+                            <tr>
+                                <td>Find gift card balance information</td>
+                                <td>31s</td>
+                                <td>56s</td>
+                                <td>83s</td>
+                                <td>56.7s</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="section-title">Overall Findings</h2>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <p>
+                        The results show that Amazon is easier to use when users are dealing with features that are
+                        strongly tied to the account area, such as viewing or tracking past orders. These tasks were
+                        completed more quickly because users could predict where order-related information would be
+                        placed.
+                    </p>
+                    <p>
+                        In contrast, tasks involving customer service, subscriptions, and policy information took longer
+                        and produced more hesitation. In those cases, the problem was not the absence of information,
+                        but the fact that users had to interpret the site’s wording and navigation structure before they
+                        could find the correct destination.
+                    </p>
+                    <p class="mb-0">
+                        Overall, the site appears functional but uneven. It supports common account actions reasonably
+                        well, but tasks involving support or management features would benefit from more direct labeling
+                        and clearer pathways.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="section-title">Interactive SUS Calculator</h2>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <p>
+                        Enter a score from 1 to 5 for each of the 10 System Usability Scale statements, then click
+                        calculate to generate the final SUS score.
+                    </p>
+
+                    <div class="row g-3">
+                        <div class="col-md-6 col-lg-4">
+                            <label for="q1" class="form-label">1. I think that I would like to use this system
+                                frequently.</label>
+                            <input type="number" class="form-control" id="q1" min="1" max="5" required>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <label for="q2" class="form-label">2. I found the system unnecessarily complex.</label>
+                            <input type="number" class="form-control" id="q2" min="1" max="5" required>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <label for="q3" class="form-label">3. I thought the system was easy to use.</label>
+                            <input type="number" class="form-control" id="q3" min="1" max="5" required>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <label for="q4" class="form-label">4. I think that I would need technical support to use
+                                this system.</label>
+                            <input type="number" class="form-control" id="q4" min="1" max="5" required>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <label for="q5" class="form-label">5. I found the various functions in this system were well
+                                integrated.</label>
+                            <input type="number" class="form-control" id="q5" min="1" max="5" required>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <label for="q6" class="form-label">6. I thought there was too much inconsistency in this
+                                system.</label>
+                            <input type="number" class="form-control" id="q6" min="1" max="5" required>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <label for="q7" class="form-label">7. I would imagine that most people would learn to use
+                                this system very quickly.</label>
+                            <input type="number" class="form-control" id="q7" min="1" max="5" required>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <label for="q8" class="form-label">8. I found the system very cumbersome to use.</label>
+                            <input type="number" class="form-control" id="q8" min="1" max="5" required>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <label for="q9" class="form-label">9. I felt very confident using the system.</label>
+                            <input type="number" class="form-control" id="q9" min="1" max="5" required>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <label for="q10" class="form-label">10. I needed to learn a lot of things before I could get
+                                going with this system.</label>
+                            <input type="number" class="form-control" id="q10" min="1" max="5" required>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 d-flex flex-wrap gap-2">
+                        <button class="btn btn-primary" onclick="calculateSUS()">Calculate SUS Score</button>
+                        <button class="btn btn-outline-secondary" onclick="fillExample()">Fill Example Values</button>
+                        <button class="btn btn-outline-danger" onclick="resetForm()">Reset</button>
+                    </div>
+
+                    <div class="mt-4">
+                        <p class="mb-1">Calculated Score:</p>
+                        <div id="susResult" class="sus-score-box">--</div>
+                        <p id="susInterpretation" class="mt-2 mb-0 text-muted"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="mb-1 fw-bold">Usability Testing Report</p>
+            <p class="mb-0">Built with Bootstrap 5 for a GitHub Pages usability reporting project.</p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateSUS() {
+            const values = [];
+            for (let i = 1; i <= 10; i++) {
+                const input = document.getElementById(`q${i}`);
+                const value = Number(input.value);
+
+                if (!value || value < 1 || value > 5) {
+                    alert("Please enter a value from 1 to 5 for all 10 questions.");
+                    return;
+                }
+
+                values.push(value);
+            }
+
+            let score = 0;
+
+            for (let i = 0; i < values.length; i++) {
+                if ((i + 1) % 2 !== 0) {
+                    score += values[i] - 1;
+                } else {
+                    score += 5 - values[i];
+                }
+            }
+
+            score = score * 2.5;
+
+            document.getElementById("susResult").textContent = score.toFixed(1);
+
+            let interpretation = "";
+            if (score >= 80) {
+                interpretation = "Excellent usability";
+            } else if (score >= 68) {
+                interpretation = "Above average usability";
+            } else if (score >= 50) {
+                interpretation = "Moderate usability";
+            } else {
+                interpretation = "Poor usability";
+            }
+
+            document.getElementById("susInterpretation").textContent = interpretation;
+        }
+
+        function fillExample() {
+            const example = [3, 3, 4, 3, 3, 3, 4, 2, 3, 3];
+            example.forEach((value, index) => {
+                document.getElementById(`q${index + 1}`).value = value;
+            });
+        }
+
+        function resetForm() {
+            for (let i = 1; i <= 10; i++) {
+                document.getElementById(`q${i}`).value = "";
+            }
+            document.getElementById("susResult").textContent = "--";
+            document.getElementById("susInterpretation").textContent = "";
+        }
+    </script>
+
+</body>
+
+</html>
