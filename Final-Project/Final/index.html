@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scrolling Through the Day</title>
+
+    <!-- Bootstrap framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--
+Reflection:
+This project uses a data storytelling approach rather than
+a traditional report layout. Bootstrap was used for layout
+and responsiveness, while the structure emphasizes a visual
+narrative through sections that build from screen time usage
+to broader questions about mental health and digital habits.
+-->
+</head>
+
+
+<body>
+
+    <!-- Main navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#top">
+                Screen Time Data Story
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#screen-time">
+                            Screen Time
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#group-differences">
+                            Groups
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mental-health">
+                            Mental Health
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#data-limits">
+                            Limits
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sources">
+                            Sources
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
+
+
+
+    <!-- Masthead image and opening title -->
+    <header id="top" class="masthead">
+
+        <div class="container text-center text-light">
+
+            <h1>
+                Scrolling Through the Day
+            </h1>
+
+            <p class="lead">
+                What teen screen time data shows
+                about habits, attention,
+                and mental health.
+            </p>
+
+            <a href="#screen-time" class="btn btn-primary btn-lg">
+                Explore the Data
+            </a>
+
+        </div>
+    </header>
+
+
+
+    <!-- Introductory context section -->
+    <section class="container py-5" id="introduction">
+
+        <h2>Introduction</h2>
+
+        <p>
+            Data helps make everyday behavior visible.
+            Screen use is something many people experience,
+            but data helps show how widespread these habits
+            have become.
+        </p>
+
+        <p>
+            Using CDC and AAP information,
+            this project explores teen screen use
+            through a visual data story.
+        </p>
+
+    </section>
+
+
+
+    <!-- Screen time distribution section -->
+    <section id="screen-time" class="section-alt py-5">
+
+        <div class="container">
+
+            <h2>
+                How Much Screen Time?
+            </h2>
+
+            <p>
+                Over half of teens reported
+                4 or more hours of daily screen time.
+            </p>
+
+
+            <!-- Screen time visualization -->
+            <div class="chart-box">
+
+                <img src="../assets/images/cdc-screen-time-chart.png"
+                    alt="CDC chart showing daily screen time among teens" class="img-fluid rounded">
+
+                <p class="chart-caption">
+                    Source:
+                    CDC/NCHS Data Brief No. 513
+                </p>
+
+            </div>
+
+
+            <ul>
+                <li>Less than 1 hour: 3.0%</li>
+                <li>1 hour: 6.1%</li>
+                <li>2 hours: 17.8%</li>
+                <li>3 hours: 22.8%</li>
+                <li>4+ hours: 50.4%</li>
+            </ul>
+
+        </div>
+    </section>
+
+
+
+    <!-- Group comparison section -->
+    <section id="group-differences" class="container py-5">
+
+        <h2>
+            Who Reports Higher Screen Use?
+        </h2>
+
+        <p>
+            Screen use differs across groups.
+        </p>
+
+
+        <!-- Group differences visualization -->
+        <div class="chart-box">
+
+            <img src="../assets/images/cdc-group-diff-chart.png" alt="CDC chart showing screen time differences"
+                class="img-fluid rounded">
+
+            <p class="chart-caption">
+                Source:
+                CDC/NCHS Data Brief No. 513
+            </p>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h4>Age</h4>
+
+                <ul>
+                    <li>Ages 12–14: 45.6%</li>
+                    <li>Ages 15–17: 55.0%</li>
+                </ul>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <h4>Gender</h4>
+
+                <ul>
+                    <li>Boys: 48.3%</li>
+                    <li>Girls: 52.5%</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Mental health comparison section -->
+    <section id="mental-health" class="section-alt py-5">
+
+        <div class="container">
+
+            <h2>
+                Screen Time and Mental Health
+            </h2>
+
+            <p>
+                Higher screen use is associated with
+                higher reported anxiety and depression symptoms.
+            </p>
+
+
+            <!-- Mental health visualization -->
+            <div class="chart-box">
+
+                <img src="../assets/images/cdc-mental-health-chart.png" alt="CDC chart comparing mental health symptoms"
+                    class="img-fluid rounded">
+
+                <p class="chart-caption">
+                    Source:
+                    CDC/NCHS Data Brief No. 513
+                </p>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <h4>Anxiety Symptoms</h4>
+
+                    <ul>
+                        <li>Under 4 hours: 12.3%</li>
+                        <li>4+ hours: 27.1%</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <h4>Depression Symptoms</h4>
+
+                    <ul>
+                        <li>Under 4 hours: 9.5%</li>
+                        <li>4+ hours: 25.9%</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Reflection on limits of the data -->
+    <section id="data-limits" class="container py-5">
+
+        <h2>
+            What the Data Cannot Fully Show
+        </h2>
+
+        <p>
+            Screen time is not only about hours.
+            It also depends on what people are doing online
+            and what that use may be replacing.
+        </p>
+
+        <p>
+            The data shows patterns,
+            but not every personal experience.
+        </p>
+
+    </section>
+
+
+
+    <!-- Sources and AI documentation -->
+    <section id="sources" class="section-alt py-5">
+
+        <div class="container">
+
+            <h2>Sources</h2>
+
+            <ul>
+
+                <li>
+                    <a href="https://www.cdc.gov/nchs/products/databriefs/db513.htm">
+                        CDC/NCHS Data Brief No. 513
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.aap.org/en/patient-care/media-and-children/center-of-excellence-on-social-media-and-youth-mental-health/qa-portal/qa-portal-library/qa-portal-library-questions/average-amounts-of-screen-time/">
+                        American Academy of Pediatrics Screen Time Q&A
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <h2 class="mt-5">
+                AI Documentation
+            </h2>
+
+            <p>
+                AI tools supported planning,
+                code scaffolding,
+                and refinement.
+            </p>
+
+            <ul>
+                <li>ChatGPT</li>
+                <li>Flourish</li>
+                <li>Figma</li>
+                <li>Bootstrap 5</li>
+            </ul>
+
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center p-4">
+        <p>
+            Data Storytelling Final Project
+        </p>
+    </footer>
+
+
+
+    <!-- Back to top button -->
+    <button id="topBtn" aria-label="Back to top">
+        ↑
+    </button>
+
+
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../assets/scripts/script.js"></script>
+
+
+    <!--
+Code Reflection:
+Sections were structured to support a scrolling
+data narrative inspired by visual essays.
+Bootstrap handles layout while custom CSS
+supports imagery and chart presentation.
+-->
+
+</body>
+
+</html>

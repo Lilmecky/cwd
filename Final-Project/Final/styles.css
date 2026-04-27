@@ -1,0 +1,213 @@
+/* Smooth scrolling between page sections */
+html {
+    scroll-behavior: smooth;
+}
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    padding-top: 56px;
+    color: #222;
+    background: #ffffff;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .12);
+}
+
+/* Top masthead image section */
+.masthead {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .60),
+            rgba(0, 0, 0, .60)),
+        url("../assets/images/teen-in-bed-phone-night.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+/* Main masthead heading */
+.masthead h1 {
+    font-size: 4.3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.masthead .lead {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.3rem;
+}
+
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Alternate background color for sections */
+.section-alt {
+    background: #eef3ff;
+}
+
+/* Section headings */
+h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+p {
+    max-width: 850px;
+}
+
+/* Chart and image container styling */
+.chart-box {
+
+    margin: 55px auto;
+
+    max-width: 950px;
+
+    padding: 0;
+
+    background: none;
+    border: none;
+
+    text-align: center;
+
+}
+
+/* Styling for chart images */
+.chart-box img {
+
+    max-width: 100%;
+    height: auto;
+
+    border: none;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, .10);
+
+}
+
+
+/* Source captions under charts */
+.chart-caption {
+
+    font-size: .92rem;
+
+    color: #555;
+
+    margin-top: 12px;
+
+    font-style: italic;
+
+}
+
+
+/* Optional figure styling */
+figure {
+    margin: 3rem auto;
+    text-align: center;
+}
+
+ul {
+    margin-top: 1rem;
+}
+
+li {
+    margin-bottom: .4rem;
+}
+
+.btn-primary {
+    padding: .85rem 1.5rem;
+    font-weight: 600;
+}
+
+/* Back to top button */
+#topBtn {
+
+    display: none;
+
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #0d6efd;
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, .18);
+
+    z-index: 999;
+
+}
+
+#topBtn:hover {
+    background: #084ec4;
+}
+
+footer {
+    margin-top: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Keyboard focus styling for accessibility */
+a:focus,
+button:focus {
+    outline: 3px solid #ffd54a;
+    outline-offset: 3px;
+}
+
+/* Mobile responsive adjustments */
+@media(max-width:768px) {
+
+    .masthead h1 {
+        font-size: 2.7rem;
+    }
+
+    .masthead .lead {
+        font-size: 1.05rem;
+    }
+
+    section {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .chart-box {
+        margin: 35px auto;
+    }
+
+}
